@@ -3,7 +3,7 @@
   tasks:
    - name: copy file Manaka.txt
      ansible.builtin.copy:
-      src: /home/ansadm/test1.txt
+      src: test1.txt
       dest: /tmp/test1.txt
       mod: '664'
      delegate_to: ansibletest01.main.ito
