@@ -5,7 +5,7 @@
      ansible.builtin.copy:
       src: test1.txt
       dest: /tmp/test1.txt
-      mod: '664'
+      mode: '664'
     
 
 
