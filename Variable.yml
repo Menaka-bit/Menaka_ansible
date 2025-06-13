@@ -1,0 +1,15 @@
+- name: Create a variable, display the value
+  hosts: localhost
+
+  vars: 
+   test: "Welcome to Ansible Playbook!" 
+
+  tasks:
+   - name: display the content of the variable test
+     ansible.builtin.debug:
+      msg: "{{ test }}"
+
+   -name: display the content of test1
+     ansible.builtin.debug:
+      msg: "{{ test1 }}"
+      ignore_errors: yes
