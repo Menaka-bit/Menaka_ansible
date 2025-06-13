@@ -8,8 +8,18 @@
    - name: display the content of the variable test
      ansible.builtin.debug:
       msg: "{{ test }}"
+      
 
    - name: display the content of test1
      ansible.builtin.debug:
       msg: "{{ test1 }}"
      ignore_errors: yes
+
+   - name: Return motd to registered var
+     ansible.builtin.command: hostname
+     register: servername
+
+   - name: display the servername
+     ansible.builtin.debug:
+      msg: "{{ servername }}"
+     
