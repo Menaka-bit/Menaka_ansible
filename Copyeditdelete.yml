@@ -6,7 +6,7 @@
       src: test1.txt
       dest: /tmp/test1.txt
       mod: '664'
-     delegate_to: ansibletest01.main.ito
+    
 
 
    - name: add some data the file manaka.txt
