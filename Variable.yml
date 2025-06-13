@@ -9,7 +9,7 @@
      ansible.builtin.debug:
       msg: "{{ test }}"
 
-   -name: display the content of test1
+   - name: display the content of test1
      ansible.builtin.debug:
       msg: "{{ test1 }}"
       ignore_errors: yes
