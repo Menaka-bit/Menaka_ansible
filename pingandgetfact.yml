@@ -1,0 +1,8 @@
+- hosts: all
+  gather_facts: yes
+  tasks:
+    - name: linux ping 
+      ping:
+    - name: Display all facts
+      debug:
+        var: ansible_facts
