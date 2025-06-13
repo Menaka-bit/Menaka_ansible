@@ -1,0 +1,22 @@
+- name: Copy, edit and delete a file
+  hosts: ansibletest02
+  tasks:
+   - name: copy file Manaka.txt
+     ansible.builtin.copy:
+      src: /home/ansadm/test1.txt
+      dest: /tmp/test1.txt
+      mod: '664'
+     delegate_to: ansibletest01.main.ito
+
+
+   - name: add some data the file manaka.txt
+     ansible.builtin.lineinfile:
+      path: /tmp/manaka.txt
+      line: 'updating the file with some text to test'
+
+
+
+   - name: deleting the manaka.txt file from test02
+     ansible.builtin.file:
+      path: /tmp/manaka.txt
+      state: absent
